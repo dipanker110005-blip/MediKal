@@ -1,0 +1,76 @@
+<USER_REQUEST>
+You will complete 16 numbered fixes below. After EVERY single fix,
+you must show proof of the change before moving to the next one.
+
+â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”
+MANDATORY PROOF RULE â€” READ THIS FIRST
+â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”
+
+After each fix below, you must paste:
+1. The exact file path you edited or created
+2. The exact old code (before) if modifying an existing file
+3. The exact new code (after)
+4. Confirmation that you saved the file
+
+If you cannot show old code + new code for a fix, that means
+you did not actually do it. Do not claim a fix is done without
+this proof.
+
+Do NOT write a plan document. Do NOT ask questions. Do NOT say
+"I will now." Open the file, make the change, save it, show
+proof, move to next fix. If a fix is genuinely too large for one
+pass, say so explicitly and break it into sub-steps yourself,
+but still complete all sub-steps before moving on.
+
+â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”
+DESIGN REFERENCE FOR THIS ENTIRE PROMPT
+â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”
+
+Reference design: a glassy pastel medical dashboard concept
+(attached as a screenshot â€” heart-health overview, doctor
+selection row, sleep-tracking cards, circular "recovery goal"
+ring).
+
+This is the ONLY visual reference for this prompt. Do not blend
+in any other style. Describe it precisely so there is no
+ambiguity:
+
+- Backgr
+<truncated 29610 bytes>
+â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”
+FIX 15 â€” VERIFICATION STEP (DO NOT SKIP)
+â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”
+
+After completing Fixes 1 through 14, run:
+flutter analyze
+Fix every error shown. Run again until "No issues found!"
+
+Then run:
+flutter build apk --debug
+Fix every build error. Run again until build succeeds.
+
+â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”
+FIX 16 â€” FINAL REPORT FORMAT (FOLLOW EXACTLY)
+â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”
+
+At the very end give me a table, one row per fix, no exceptions,
+no skipped rows:
+
+Fix # | File(s) changed | Old code snippet | New code snippet | Status
+
+Then state:
+Total files changed: X
+flutter analyze result: ...
+flutter build result: ...
+APK location: ...
+
+If ANY fix could not be completed, write "FAILED â€” reason:
+[exact reason]" in that row. Do not mark something DONE if you
+did not actually show old code and new code as proof...https://in.pinterest.com/search/pins/?q=healthcare%20ui&rs=typed-> i am  attaching link for ui reference...after doing all these changes push these changes to vercel...
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-06-21T05:44:55-07:00.
+</ADDITIONAL_METADATA>
+<USER_SETTINGS_CHANGE>
+The user changed setting `Model Selection` from None to Gemini 3.5 Flash (Medium). No need to comment on this change if the user doesn't ask about it. If reporting what model you are, please use a human readable name instead of the exact string.
+</USER_SETTINGS_CHANGE>

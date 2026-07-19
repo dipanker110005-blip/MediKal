@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Image Preview</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #1e1e1e;
+      color: white;
+      padding: 20px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      border: 1fr solid #444;
+      padding: 10px;
+      background: #2e2e2e;
+      border-radius: 8px;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 4px;
+      background: white; /* helper to see transparent white bg images */
+    }
+    .title {
+      margin-top: 10px;
+      font-weight: bold;
+      word-break: break-all;
+    }
+  </style>
+</head>
+<body>
+  <h1>MediKal Background Image Previewer</h1>
+  <div class="grid">
+    <div class="card">
+      <img src="../frontend/assets/images/media__1781577843592.png">
+      <div class="title">media__1781577843592.png</div>
+    </div>
+    <div class="card">
+      <img src="../frontend/assets/images/media__1781577846833.jpg">
+      <div class="title">media__1781577846833.jpg</div>
+    </div>
+    <div class="card">
+      <img src="../frontend/assets/images/media__1781577854758.jpg">
+      <div class="title">media__1781577854758.jpg</div>
+    </div>
+    <div class="card">
+      <img src="../frontend/assets/images/media__1781577858880.jpg">
+      <div class="title">media__1781577858880.jpg</div>
+    </div>
+    <div class="card">
+      <img src="../frontend/assets/images/media__1781578591045.png">
+      <div class="title">media__1781578591045.png</div>
+    </div>
+    <div class="card">
+      <img src="../frontend/assets/images/media__1781578760734.png">
+      <div class="title">media__1781578760734.png</div>
+    </div>
+    <div class="card">
+      <img src="../frontend/assets/images/media__1781580372940.png">
+      <div class="title">media__1781580372940.png</div>
+    </div>
+    <div class="card">
+      <img src="../frontend/assets/images/media__1781580603404.png">
+      <div class="title">media__1781580603404.png</div>
+    </div>
+    <div class="card">
+      <img src="../frontend/assets/images/media__1781580769913.png">
+      <div class="title">media__1781580769913.png</div>
+    </div>
+    <div class="card">
+      <img src="../frontend/assets/images/media__1781581455393.png">
+      <div class="title">media__1781581455393.png (Screenshot)</div>
+    </div>
+    <div class="card">
+      <img src="../frontend/assets/images/media__1781584595495.png">
+      <div class="title">media__1781584595495.png</div>
+    </div>
+  </div>
+</body>
+</html>

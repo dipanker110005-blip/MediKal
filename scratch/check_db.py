@@ -1,34 +1,26 @@
-import sqlite3
+import os
+import django
+import sys
 
-def check_and_update():
-    try:
-        conn = sqlite3.connect('backend/db.sqlite3')
-        cursor = conn.cursor()
-        
-        # Verify table exists
-        cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='patients_patient';")
-        if not cursor.fetchone():
-            print("Table patients_patient does not exist.")
-            return
+# Set up django environment
+sys.path.append('C:/Users/OM/OneDrive/Desktop/MediKal/backend')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'medikal_backend.settings')
+django.setup()
 
-        # Check initial values
-        cursor.execute("SELECT id, blood_group FROM patients_patient;")
-        rows = cursor.fetchall()
-        print("Before update, patient profiles:", rows)
+from django.contrib.auth import get_user_model
+from appointments.models import Appointment
+from notifications.models import Notification
 
-        # Update empty blood groups
-        cursor.execute("UPDATE patients_patient SET blood_group='O+' WHERE blood_group IS NULL OR blood_group='';")
-        conn.commit()
-        print("Updated rows count:", cursor.rowcount)
+User = get_user_model()
 
-        # Check after values
-        cursor.execute("SELECT id, blood_group FROM patients_patient;")
-        rows_after = cursor.fetchall()
-        print("After update, patient profiles:", rows_after)
-        
-        conn.close()
-    except Exception as e:
-        print("Error:", e)
+print("=== Users ===")
+for u in User.objects.all():
+    print(f"ID: {u.id}, Email: {u.email}, Name: {u.full_name}, Role: {u.role}")
 
-if __name__ == '__main__':
-    check_and_update()
+print("\n=== Appointments ===")
+for a in Appointment.objects.all():
+    print(f"ID: {a.id}, Patient: {a.patient.user.email}, Doctor: {a.doctor.user.full_name}, Status: {a.status}, Date: {a.date}")
+
+print("\n=== Notifications ===")
+for n in Notification.objects.all():
+    print(f"ID: {n.id}, User: {n.user.email}, Title: {n.title}, Read: {n.is_read}, Created: {n.created_at}")
